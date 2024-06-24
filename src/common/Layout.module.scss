@@ -1,0 +1,27 @@
+.wrap {
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  a {
+    color: white;
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.content {
+  min-height: calc(100vh - 100px);
+  margin-top: 40px;
+}
+
+.footer-wrap {
+  margin-top: 700px;
+  height: 150px;
+}

@@ -1,0 +1,123 @@
+.box {
+  position: relative;
+}
+
+.tag {
+  position: absolute;
+  top: 40px;
+  left: -35px;
+  rotate: -90deg;
+  margin-left: auto;
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: all 0.3s linear;
+
+  &.is-rotate {
+    transform: rotateX(180deg);
+    z-index: -1;
+  }
+
+  &.is-reset {
+    transform: rotateX(0deg);
+  }
+
+  div {
+    width: auto;
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .front {
+    backface-visibility: hidden;
+    background-color: antiquewhite;
+  }
+
+  .back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+  }
+}
+
+.card {
+  width: 100%;
+  padding-top: 20px;
+  border-radius: 5px;
+  border: 1px solid powderblue;
+  background: #fff;
+
+  .title {
+    font-size: 17px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  .preview {
+    padding: 20px;
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+  transition: all 0.3s 0.3s linear;
+
+  &.is-show {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1);
+    width: 80%;
+    height: 80%;
+    overflow: visible;
+  }
+
+  .inner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1);
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    opacity: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: all 0.1s linear;
+    transition-delay: 0.3s;
+
+    &.is-show {
+      opacity: 1;
+    }
+
+    &.is-reset {
+      opacity: 0;
+      transition-delay: 0s;
+    }
+    .btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+}

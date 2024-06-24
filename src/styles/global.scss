@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, AppleSDGothicNeo, "Noto Sans",
+    Roboto, Montserrat, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  // letter-spacing: -1px;
+  // word-spacing: -0.5px;
+}
+
+html,
+body {
+  position: relative;
+  height: 100vh;
+  height: var(--mw-ios-vh);
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 0;
+}
